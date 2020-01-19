@@ -2,8 +2,8 @@
 
 FROM databricksruntime/minimal:latest
 
-RUN apt-get update \
-  && apt-get install --yes openssh-server \
+RUN apt-get update 
+RUN apt-get install --yes openssh-server \
   && apt-get clean \
   && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* \
   && mkdir ~/.ssh \
