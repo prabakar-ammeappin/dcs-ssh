@@ -1,4 +1,5 @@
 # Docker-version 1.0
+
 FROM databricksruntime/minimal:latest
 
 RUN apt-get update \
@@ -13,6 +14,7 @@ RUN apt-get update \
   && chmod 700 /root/.ssh \
   && chmod 600 /root/.ssh/id_rsa \
   && ssh-add ~/.ssh/id_rsa 
+  && git clone https://github.com/prabakar-ammeappin/dcs-ssh
 
 # Warning: the created user has root permissions inside the container
 # Warning: you still need to start the ssh process with `sudo service ssh start`
