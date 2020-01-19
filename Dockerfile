@@ -13,7 +13,7 @@ RUN apt-get update \
   && chmod go-w /root \
   && chmod 700 /root/.ssh \
   && chmod 600 /root/.ssh/id_rsa \
-  && ssh-add ~/.ssh/id_rsa 
+  && ssh-add ~/.ssh/id_rsa \
   && git clone https://github.com/prabakar-ammeappin/dcs-ssh
 
 # Warning: the created user has root permissions inside the container
